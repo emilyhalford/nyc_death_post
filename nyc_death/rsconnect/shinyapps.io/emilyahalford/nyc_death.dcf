@@ -1,0 +1,12 @@
+name: nyc_death
+title: nyc_death
+username:
+account: emilyahalford
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3436515
+bundleId: 4043856
+url: https://emilyahalford.shinyapps.io/nyc_death/
+when: 1609373319.26068
+asMultiple: FALSE
+asStatic: FALSE

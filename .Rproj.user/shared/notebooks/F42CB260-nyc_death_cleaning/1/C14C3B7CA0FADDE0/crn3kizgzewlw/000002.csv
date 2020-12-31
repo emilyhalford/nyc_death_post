@@ -1,0 +1,26 @@
+"0",""
+"0","death = read_csv(""./data/nyc_death.csv"") %>% "
+"0","  janitor::clean_names() %>% "
+"0","  filter("
+"0","    race_ethnicity != ""Not Stated/Unknown"","
+"0","    race_ethnicity != ""Other Race/ Ethnicity"""
+"0","  ) %>% "
+"0","  mutate("
+"0","    deaths = as.numeric(deaths),"
+"0","    death_rate = as.numeric(death_rate),"
+"0","    age_adjusted_death_rate = as.numeric(age_adjusted_death_rate)"
+"0","  )"
+"2","Parsed with column specification:
+cols(
+  Year = [32mcol_double()[39m,
+  `Leading Cause` = [31mcol_character()[39m,
+  Sex = [31mcol_character()[39m,
+  `Race Ethnicity` = [31mcol_character()[39m,
+  Deaths = [31mcol_character()[39m,
+  `Death Rate` = [31mcol_character()[39m,
+  `Age Adjusted Death Rate` = [31mcol_character()[39m
+)
+"
+"0","  "
+"0","#write_csv(death, ""./data/cleaned_nyc_data.csv"")"
+"0",""
