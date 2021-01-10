@@ -6,12 +6,12 @@ library(shiny)
 nyc_mortality = read_csv("cleaned_nyc_data.csv")
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui = fluidPage(
 
     # Application title
     titlePanel("NYC Mortality by Race and Sex, 2007-2014"),
 
-    # Sidebar with a slider input for number of bins 
+    # Sidebar with a 3 inputs 
     sidebarLayout(
         sidebarPanel(
            selectInput(inputId = "year",
@@ -35,7 +35,7 @@ ui <- fluidPage(
                          choices = unique(nyc_mortality$race_ethnicity))
         ),
 
-        # Show a plot of the generated distribution
+        # Show plot and table
         mainPanel(
            plotOutput("deathPlot"),
            DT::dataTableOutput("deathTable")
@@ -45,7 +45,7 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 
- server <- function(input, output) {
+ server = function(input, output) {
 
     selections = reactive({
       req(input$year)

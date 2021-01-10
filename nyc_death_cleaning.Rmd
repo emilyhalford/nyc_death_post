@@ -21,7 +21,11 @@ death = read_csv("./data/nyc_death.csv") %>%
   mutate(
     deaths = as.numeric(deaths),
     death_rate = as.numeric(death_rate),
-    age_adjusted_death_rate = as.numeric(age_adjusted_death_rate),
+    age_adjusted_death_rate = as.numeric(age_adjusted_death_rate))
+
+death = 
+  death %>% 
+    mutate(
     leading_cause = str_replace_all(leading_cause, "[//(//)]", ""),
     leading_cause = str_replace(leading_cause, "Influenza Flu and Pneumonia J09-J18", "Influenza & Pneumonia"),
     leading_cause = str_replace(leading_cause, "Accidents Except Drug Posioning V01-X39, X43, X45-X59, Y85-Y86", "Accidents"),
